@@ -1,0 +1,82 @@
+-------------------------
+GL-Beats: Data Dictionary
+-------------------------
+
+artist
+
+artist_id:Integer - Unique ID for each Artist.
+artist_name:Varchar(255) - Name of the Artist.
+-------------------------
+album
+
+album_id:Integer - Unique ID for each Album.
+title:Varchar(50) - Name of the Album.
+artist_id:Integer - Unique ID for each Artist.
+-------------------------
+playlist
+
+playlist_id:Integer - Unique ID for each playlist.
+playlist_name:Varchar(40) - Name of the playlist.
+-------------------------
+playlisttrack
+
+playlist_id:Integer - Unique ID for each playlist.
+track_id:Integer - Unique ID for each track.
+-------------------------
+genre
+
+genre_id:Integer - Unique ID for each genre.
+genre_name:Varchar(15) - Name of the Genre.
+-------------------------
+mediatype
+
+media_type_id:Integer - Unique ID for each media type.
+media_type_name:Varchar(40) - Name of the media type.
+-------------------------
+tracks
+
+track_id:Integer - Unique ID for each track.
+track_name:varchar(100) - Name of the track.
+album_id:Integer - Unique ID for each Album.
+media_type_id:Integer - Unique ID for each media type.
+genre_id:Integer - Unique ID for each genre.
+composer:Varchar(40) - Name of the composer(s).
+milliseconds:BIGINT - Duration of the track in milliseconds.
+bytes:BIGINT - Size of the track in bytes.
+unit_price:Decimal(5,3) - Price of the track.
+-------------------------
+customers
+
+customer_id:Integer - Unique ID for each customer.
+firstname:Varchar(15) - First name of the customer.
+lastname:Varchar(15) - Last name of the customer.
+company:Varchar(50) - Customer's workplace.
+address:Varchar(100) - Address of the customer
+city:Varchar(25) - City of the customer.
+state:Varchar(20) - State of the customer.
+country:Varchar(15) - Country of the customer.
+postal_code:Varchar(20) - Postal Code of the city.
+phone:Varchar(20) - Phone number of the customer.
+fax:Varchar(20) - Fax number of the customer.
+email:Varchar(50) - Email Address of the customer.
+-------------------------
+invoice 
+
+invoice_id:Integer - Unique ID of the Invoice.
+customer_id:Integer - Customer to whom the invoice belongs to.
+invoice_date:Date - Date of the Invoice.
+billing_address:Varchar(50) - Address of the place where the customer was billed.
+billing_city:Varchar(25) - City in which the customer was billed.
+billing_state:Varchar(20) - State in which the customer was billed.
+billing_country:Varchar(20) - Country in which the customer was billed.
+billing_postal_code:Varchar(25) - Postal code of the city in which the customer was billed.
+total_price:Decimal(4,3) - Total Price the customer paid.
+-------------------------
+invoiceitems
+
+invoice_line_id:Integer - Unique ID for each track present in an invoice.
+invoice_id:Integer - Unique ID of the Inovice.
+track_id:Integer - Unique ID of the Track.
+unit_price:Decimal(5,3) - Amount charged for each track in the invoice.
+quantity:Integer - Quantity of tracks customer bought in each invoice
+-------------------------
